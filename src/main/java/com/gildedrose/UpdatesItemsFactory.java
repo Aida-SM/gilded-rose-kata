@@ -7,6 +7,8 @@ public class UpdatesItemsFactory {
             return new UpdatesSpecialEventItem();
         else if (item.name == "Aged Brie")
             return new UpdatesSpecialEventItem();
+        else if (item.name == "Sulfuras, Hand of Ragnaros")
+            return new UpdatesUnchangingItem();
         else
             return new UpdatesRegularItem();
     }

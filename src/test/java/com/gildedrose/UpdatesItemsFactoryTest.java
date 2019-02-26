@@ -39,6 +39,15 @@ public class UpdatesItemsFactoryTest {
         Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesRegularItem.class));
     }
 
+    @Test
+    public void shouldCreateUpdatedItemWhenItemIsSulfuras_Hand_of_Ragnaros() {
+
+        item = new Item("Sulfuras, Hand of Ragnaros", 0, 0);
+        Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesUnchangingItem.class));
+    }
+
+
+
 
 
 
