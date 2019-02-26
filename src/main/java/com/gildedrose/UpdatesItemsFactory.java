@@ -3,6 +3,9 @@ package com.gildedrose;
 public class UpdatesItemsFactory {
     public UpdatesItem updateFor(Item  item) {
 
-        return new UpdatesSpecialEventItem();
+        if (item.name == "Backstage passes to a TAFKAL80ETC concert")
+            return new UpdatesSpecialEventItem();
+        else
+            return null;
     }
 }
