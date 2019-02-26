@@ -14,9 +14,7 @@ public class UpdatesItemsFactoryTest {
     @Before
     public void setUp() throws Exception {
         updatesItemsFactory = new UpdatesItemsFactory();
-       // item = new Item("foo", 0, 0);
     }
-
 
     @Test
     public void shouldCreateUpdatedItemWhenItemIsBackstage_passes_to_a_TAFKAL80ETC_concert() {
@@ -52,14 +50,4 @@ public class UpdatesItemsFactoryTest {
         item = new Item("Conjured aaa", 0, 0);
         Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesConjuredItem.class));
     }
-
-
-
-
-
-
-
-
-
-
 }
