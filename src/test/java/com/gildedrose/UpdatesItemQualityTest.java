@@ -22,7 +22,13 @@ public class UpdatesItemQualityTest {
        Assert.assertEquals(item,updatesItemQuality.updateItem(item));
     }
 
+    @Test
+    public void updateFor_shouldReturnAnUpdatesItem() {
+        UpdatesItemsFactory updatesItemsFactory = new UpdatesItemsFactory();
+        UpdatesItem updatesItem = updatesItemsFactory.updateFor(item);
+        Assert.assertEquals(item, updatesItem.update(item));
 
+    }
 
 
     }
