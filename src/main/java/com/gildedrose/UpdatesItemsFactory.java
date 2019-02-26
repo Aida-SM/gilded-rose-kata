@@ -9,6 +9,8 @@ public class UpdatesItemsFactory {
             return new UpdatesQualityIncreasingItem();
         else if (item.name == "Sulfuras, Hand of Ragnaros")
             return new UpdatesUnchangingItem();
+        else if (item.name.startsWith("Conjured aaa"))
+            return new UpdatesConjuredItem();
         else
             return new UpdatesRegularItem();
     }

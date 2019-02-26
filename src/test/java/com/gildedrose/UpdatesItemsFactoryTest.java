@@ -46,7 +46,12 @@ public class UpdatesItemsFactoryTest {
         Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesUnchangingItem.class));
     }
 
+    @Test
+    public void shouldCreateUpdatedItemWhenItemStartWithConjured() {
 
+        item = new Item("Conjured aaa", 0, 0);
+        Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesConjuredItem.class));
+    }
 
 
 
