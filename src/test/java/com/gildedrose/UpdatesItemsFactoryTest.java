@@ -32,6 +32,14 @@ public class UpdatesItemsFactoryTest {
         Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesRegularItem.class));
     }
 
+    @Test
+    public void shouldCreateUpdatedItemWhenItemIsAged_Brie() {
+
+        item = new Item("Aged Brie", 0, 0);
+        Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesRegularItem.class));
+    }
+
+
 
 
 

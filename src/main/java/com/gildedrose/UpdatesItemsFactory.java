@@ -5,6 +5,8 @@ public class UpdatesItemsFactory {
 
         if (item.name == "Backstage passes")
             return new UpdatesSpecialEventItem();
+        else if (item.name == "Aged Brie")
+            return new UpdatesSpecialEventItem();
         else
             return new UpdatesRegularItem();
     }
