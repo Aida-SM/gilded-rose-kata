@@ -14,19 +14,14 @@ public class UpdatesItemsFactoryTest {
     @Before
     public void setUp() throws Exception {
         updatesItemsFactory = new UpdatesItemsFactory();
-        item = new Item("foo", 0, 0);
+       // item = new Item("foo", 0, 0);
     }
 
-    @Test
-    public void updateFor_shouldReturnAnUpdatesItem() {
-        UpdatesItem updatesItem = updatesItemsFactory.updateFor(item);
-        Assert.assertEquals(item, updatesItem.update(item));
-    }
 
     @Test
     public void shouldCreateUpdatedItemWhenItemIsBackstage_passes_to_a_TAFKAL80ETC_concert() {
 
-        item = new Item("Backstage passes ", 0, 0);
+        item = new Item("Backstage passes", 0, 0);
         Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesSpecialEventItem.class));
     }
 
@@ -36,6 +31,10 @@ public class UpdatesItemsFactoryTest {
         item = new Item("foo ", 0, 0);
         Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesRegularItem.class));
     }
+
+
+
+
 
 
 
