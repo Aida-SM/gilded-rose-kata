@@ -6,7 +6,7 @@ public class UpdatesItemsFactory {
         if (item.name == "Backstage passes")
             return new UpdatesSpecialEventItem();
         else if (item.name == "Aged Brie")
-            return new UpdatesSpecialEventItem();
+            return new UpdatesQualityIncreasingItem();
         else if (item.name == "Sulfuras, Hand of Ragnaros")
             return new UpdatesUnchangingItem();
         else

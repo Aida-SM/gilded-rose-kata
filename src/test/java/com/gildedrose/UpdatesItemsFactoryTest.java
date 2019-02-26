@@ -36,7 +36,7 @@ public class UpdatesItemsFactoryTest {
     public void shouldCreateUpdatedItemWhenItemIsAged_Brie() {
 
         item = new Item("Aged Brie", 0, 0);
-        Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesRegularItem.class));
+        Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesQualityIncreasingItem.class));
     }
 
     @Test
@@ -45,6 +45,8 @@ public class UpdatesItemsFactoryTest {
         item = new Item("Sulfuras, Hand of Ragnaros", 0, 0);
         Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesUnchangingItem.class));
     }
+
+
 
 
 
