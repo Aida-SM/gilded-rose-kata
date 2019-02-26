@@ -28,8 +28,15 @@ public class UpdatesItemsFactoryTest {
 
         item = new Item("Backstage passes ", 0, 0);
         Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesSpecialEventItem.class));
-
     }
+
+    @Test
+    public void shouldCreateUpdatedItemWhenItemIsRegular_Item() {
+
+        item = new Item("foo ", 0, 0);
+        Assert.assertThat(updatesItemsFactory.updateFor(item), instanceOf(UpdatesRegularItem.class));
+    }
+
 
 
 }

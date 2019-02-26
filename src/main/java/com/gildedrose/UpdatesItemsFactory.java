@@ -6,6 +6,6 @@ public class UpdatesItemsFactory {
         if (item.name == "Backstage passes to a TAFKAL80ETC concert")
             return new UpdatesSpecialEventItem();
         else
-            return null;
+            return new UpdatesRegularItem();
     }
 }
