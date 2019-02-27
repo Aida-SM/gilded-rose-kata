@@ -11,6 +11,6 @@ public class QualityAdjuster {
             if (amountOfIncrement <0)
                 return Math.max(newQuality, 0);
             else
-                return newQuality;
+                return Math.min(newQuality, 50);
     }
 }

@@ -40,4 +40,8 @@ public class QualityAdjusterTest {
         amountOfIncreement = -2;
         Assert.assertEquals(0 , Math.max(qualityAdjuster.adjust(item,amountOfIncreement),0));
     }
+    @Test
+    public void shouldReturnTheMinOfNewQualityAndFiftyWhenAmountOfIncrementIsNOTLowerThanZero() {
+        Assert.assertEquals(2 , Math.min(qualityAdjuster.adjust(item,amountOfIncreement),50));
+    }
 }
