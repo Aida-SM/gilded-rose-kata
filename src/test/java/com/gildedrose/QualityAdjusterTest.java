@@ -29,7 +29,11 @@ public class QualityAdjusterTest {
     public void shouldReturnNewQualityWhenSellInIsBiggerThanZero() {
         Assert.assertEquals(2, qualityAdjuster.adjust(item,amountOfIncreement));
     }
-
+    @Test
+    public void shouldReturnNewQualityWhenSellInIsNOTBiggerThanZero() {
+        item.sellIn = 0;
+        Assert.assertEquals(4, qualityAdjuster.adjust(item,amountOfIncreement));
+    }
 
 
 
