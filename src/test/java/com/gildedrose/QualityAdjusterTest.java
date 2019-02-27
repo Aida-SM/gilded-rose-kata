@@ -22,7 +22,7 @@ public class QualityAdjusterTest {
     @Test
     public void shouldReturnNewQuality() {
         int newQuality = qualityAdjuster.adjust(item,2);
-        Assert.assertEquals(0, newQuality);
+        Assert.assertEquals(2, newQuality);
     }
 
     @Test
